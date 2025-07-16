@@ -42,10 +42,10 @@ startBtn.addEventListener('click', () => {
   }
 });
 
-// stopBtn.addEventListener('click', () => {
-//   timer.
-// })
-
+stopBtn.addEventListener('click', () => {
+  clearInterval(timer);
+  timer = null;
+});
 
 
 
