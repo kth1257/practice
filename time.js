@@ -24,11 +24,20 @@ startBtn.addEventListener('click', () => {
   } else {
     timer = setInterval ((() => {
       let sec = parseInt(second.textContent);
+      let min = parseInt(minute.textContent);
+      let hr = parseInt(hour.textContent);
       sec++; 
       if(sec >= 60) {
         sec = 0;
+        min++;
+      }
+      if(min >= 60) {
+        min = 0;
+        hr++;
       }
       second.textContent = sec < 10 ? `0${sec}` : sec;
+      minute.textContent = min < 10 ? `0${min}` : min;
+      hour.textContent = hr < 10 ? `0${hr}` : hr;
     }),1000);
   }
 });
